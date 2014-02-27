@@ -44,13 +44,22 @@
 			-webkit-filter: none;
 		}
 
+		.desc {
+			margin-top: 80px;
+		}
+
+		.desc h2 {
+			margin-bottom: 60px;
+		}
+
 		.desc .item {
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 		}
 
 		.desc .item img {
 			height: 39px;
 			float: left;
+			margin-right: 20px;
 		}
 
 		.desc .item .desc-text {
@@ -61,7 +70,7 @@
 
 		.desc .item {
 			display: block;
-			clear: both;
+			
 		}
 
 		.score {
@@ -97,6 +106,10 @@
 			color: rgba(255, 106, 107, 1.0);
 		}
 
+		h2 {
+			text-align: center;
+		}
+
 
 		.clear {
 			clear: both;
@@ -116,7 +129,7 @@
 		<div class="achievements">
 			<div class="team"><img src="brg.png"><div class="name">Bergen</div></div>
 
-			<div class="item"><img src="canon.png"><div class="score">0</div></div>
+			<div class="item achieved"><img src="canon.png"><div class="score">500</div></div>
 			<div class="item"><img src="coldet.png"><div class="score">0</div></div>
 			<div class="item"><img src="duct.png"><div class="score">0</div></div>
 			<div class="item"><img src="fx.png"><div class="score">0</div></div>
@@ -131,9 +144,10 @@
 			<div class="item"><img src="speaker.png"><div class="score">0</div></div>
 			<div class="item"><img src="usain.png"><div class="score">0</div></div>
 			<div class="item"><img src="web.png"><div class="score">0</div></div>
+			<div class="item"><img src="walk.png"><div class="score">0</div></div>
 
 			<div class="clear"></div>
-			<div class="total">1700</div>
+			<div class="total">2300</div>
 		</div>
 		<div class="achievements">
 			<div class="team"><img src="tro.png"><div class="name">Tromsø</div></div>
@@ -153,6 +167,7 @@
 			<div class="item"><img src="speaker.png"><div class="score">0</div></div>
 			<div class="item"><img src="usain.png"><div class="score">0</div></div>
 			<div class="item"><img src="web.png"><div class="score">0</div></div>
+			<div class="item"><img src="walk.png"><div class="score">0</div></div>
 
 			<div class="clear"></div>
 			<div class="total">0</div>
@@ -175,6 +190,7 @@
 			<div class="item"><img src="speaker.png"><div class="score">0</div></div>
 			<div class="item"><img src="usain.png"><div class="score">0</div></div>
 			<div class="item"><img src="web.png"><div class="score">0</div></div>
+			<div class="item"><img src="walk.png"><div class="score">0</div></div>
 
 			<div class="clear"></div>
 			<div class="total">2150</div>
@@ -198,6 +214,7 @@
 			<div class="item"><img src="speaker.png"><div class="score">0</div></div>
 			<div class="item"><img src="usain.png"><div class="score">0</div></div>
 			<div class="item"><img src="web.png"><div class="score">0</div></div>
+			<div class="item"><img src="walk.png"><div class="score">0</div></div>
 
 			<div class="clear"></div>
 			<div class="total leader">3050</div>
@@ -206,21 +223,25 @@
 		<div class="clear"></div>
 
 		<div class="desc">
-			<div class="item"><img src="canon.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="coldet.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="duct.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="fx.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="giant.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="head.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="hill.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="kill.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="long.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="mad.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="octo.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="slalom.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="speaker.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="usain.png"><div class="desc-text">0</div></div>
-			<div class="item"><img src="web.png"><div class="desc-text">0</div></div>
+			<h2>Achievements</h2>
+
+			<div class="item"><img src="canon.png"><div class="desc-text">Cannonball – Lage en kanon som skyter minst 10 cm
+</div><div class="clear"></div></div>
+			<div class="item"><img src="coldet.png"><div class="desc-text">Collision Detection – Roboten stopper automatisk 10 cm foran hindring</div><div class="clear"></div></div>
+			<div class="item"><img src="duct.png"><div class="desc-text">Duct tape – Mest kreative bruk av mindstorms innen cut-off</div><div class="clear"></div></div>
+			<div class="item"><img src="fx.png"><div class="desc-text">FX – Implementer lydeffekter når kanonen avfyres</div><div class="clear"></div></div>
+			<div class="item"><img src="giant.png"><div class="desc-text">One giant LEAP – Lag en robot som styres med LEAP</div><div class="clear"></div></div>
+			<div class="item"><img src="head.png"><div class="desc-text">Headshot – Hvem klarer å treffe tre mål på kortest mulig tid?</div><div class="clear"></div></div>
+			<div class="item"><img src="hill.png"><div class="desc-text">Hillclimber – I Norge er det kjekt å kunne kjøre i bakker</div><div class="clear"></div></div>
+			<div class="item"><img src="kill.png"><div class="desc-text">Mr. Kill – En superhemmelig gesture som slår av roboten</div><div class="clear"></div></div>
+			<div class="item"><img src="long.png"><div class="desc-text">Long shot – Hvilken kanon skyter lengst?</div><div class="clear"></div></div>
+			<div class="item"><img src="mad.png"><div class="desc-text">Mad Scientist – Mest kreative bruk av LEAP innen cut-off</div><div class="clear"></div></div>
+			<div class="item"><img src="octo.png"><div class="desc-text">Octocat – Hemmelig villkår</div><div class="clear"></div></div>
+			<div class="item"><img src="slalom.png"><div class="desc-text">Slalom – Kjør fremover, sving til høyre og venstre</div><div class="clear"></div></div>
+			<div class="item"><img src="speaker.png"><div class="desc-text">Loudspeaker – Spill en sang fra høyttaleren</div><div class="clear"></div></div>
+			<div class="item"><img src="usain.png"><div class="desc-text">Usain Bolt – Raskeste robot på 2-metern</div><div class="clear"></div></div>
+			<div class="item"><img src="web.png"><div class="desc-text">Webmaster – Roboten kan fjernstyres via internett</div><div class="clear"></div></div>
+			<div class="item"><img src="walk.png"><div class="desc-text">Walker– Lag en robot som kan stå og gå på to bein</div><div class="clear"></div></div>
 
 			<div class="clear"></div>
 		</div>
