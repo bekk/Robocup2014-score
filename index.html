@@ -242,7 +242,7 @@
 			$(document).on('scroll', function(event) {
 				var currentTop = window.pageYOffset;
 				var tresholdTop = $('.achievements .team div.name').first().offset().top - 60;
-				var tresholdBottom = $('.desc h2').offset().top - 60;
+				var tresholdBottom = $('.total').last().offset().top - 60;
 				
 
 				if (currentTop > tresholdTop && tresholdBottom > currentTop) {
