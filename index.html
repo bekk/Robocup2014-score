@@ -117,11 +117,35 @@
 
 	</style>
 
+	
+
+	<script type="text/javascript" src="jquery.js"></script>
+
 	<script type="text/javascript">
-		setTimeout(function() {
-			window.location.reload()
-		}, 10000);
+		$(document).ready(function() {
+			setTimeout(function() {
+				window.location.reload()
+			}, 10000);
+
+			$('.achievements').each(function(index, ele) { 
+				var total = 0;
+				$(ele).find('.item').each(function(index, ele) {
+					 var scoreEle = $(ele).find('.score');
+					 var score = scoreEle.html();
+					 total += parseInt(score);
+
+					 if (score > 0) {
+					 	$(ele).addClass('achieved')
+					 }
+
+				});
+				
+				$(ele).find('.total').html(total);
+			});
+		});
+
 	</script>
+
 </head>
 <body>
 	<div class="container">
@@ -147,7 +171,7 @@
 			<div class="item"><img src="walk.png"><div class="score">0</div></div>
 
 			<div class="clear"></div>
-			<div class="total">2300</div>
+			<div class="total">0</div>
 		</div>
 		<div class="achievements">
 			<div class="team"><img src="tro.png"><div class="name">Tromsø</div></div>
@@ -193,7 +217,7 @@
 			<div class="item"><img src="walk.png"><div class="score">0</div></div>
 
 			<div class="clear"></div>
-			<div class="total">2150</div>
+			<div class="total">0</div>
 		</div>
 		
 		<div class="achievements">
@@ -217,7 +241,7 @@
 			<div class="item"><img src="walk.png"><div class="score">0</div></div>
 
 			<div class="clear"></div>
-			<div class="total leader">3050</div>
+			<div class="total leader">0</div>
 		</div>
 
 		<div class="clear"></div>
@@ -226,7 +250,7 @@
 			<h2>Achievements</h2>
 
 			<div class="item"><img src="canon.png"><div class="desc-text">Cannonball – Lage en kanon som skyter minst 10 cm
-</div><div class="clear"></div></div>
+			</div><div class="clear"></div></div>
 			<div class="item"><img src="coldet.png"><div class="desc-text">Collision Detection – Roboten stopper automatisk 10 cm foran hindring</div><div class="clear"></div></div>
 			<div class="item"><img src="duct.png"><div class="desc-text">Duct tape – Mest kreative bruk av mindstorms innen cut-off</div><div class="clear"></div></div>
 			<div class="item"><img src="fx.png"><div class="desc-text">FX – Implementer lydeffekter når kanonen avfyres</div><div class="clear"></div></div>
