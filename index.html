@@ -163,29 +163,45 @@
 			$('.achievements').each(function(index, ele) { 
 				var total = 0;
 				$(ele).find('.item').each(function(index, ele) {
-					 var scoreEle = $(ele).find('.score');
-					 var score = scoreEle.html();
-					 total += parseInt(score);
+					var scoreEle = $(ele).find('.score');
+					var score = scoreEle.html();
+					total += parseInt(score);
 
-					 if (score > 0) {
-					 	$(ele).addClass('achieved')
-					 }
+					if (score > 0) {
+						$(ele).addClass('achieved')
+					}
 
 				});
 				
 				$(ele).find('.total').html(total);
 
-				$('.nav ul li.scoreboard').click(function() {
-				    $('body').stop().animate({
-				        scrollTop: $(".team div.name").first().offset().top
-				    }, 1000);
-				});
+			});
 
-				$('.nav ul li.achievements').click(function() {
-				    $('body').stop().animate({
-				        scrollTop: $(".desc").offset().top
-				    }, 1000);
-				});
+			$('.nav ul li.scoreboard').click(function() {
+				$('body').stop().animate({
+					scrollTop: $(".team div.name").first().offset().top
+				}, 1000);
+			});
+
+			$('.nav ul li.achievements').click(function() {
+				$('body').stop().animate({
+					scrollTop: $(".desc").offset().top
+				}, 1000);
+			});
+
+			var max = 0;
+			$('.total').each(function(i,e) { 
+				var score = $(e).html();
+				if (max < score) {
+					max = score;
+				}
+			});
+
+			$('.total').each(function(i,e) { 
+				var score = $(e).html();
+				if (score == max) {
+					$(e).addClass('leader');
+				}
 			});
 		});
 
@@ -270,7 +286,7 @@
 			<div class="item"><img src="walk.png"><div class="score">1500</div></div>
 
 			<div class="clear"></div>
-			<div class="total leader">0</div>
+			<div class="total">0</div>
 		</div>
 		
 		<div class="achievements">
