@@ -155,6 +155,33 @@
 			font-weight: 900;
 		}
 
+		.hidden {
+			display: none;
+		}
+
+		.teams {
+			position: fixed;
+			z-index: 1;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 90px;
+			background-color: #333;
+		}
+
+		.teams .wrapper {
+			margin: 0 auto;
+			width: 1000px;
+			height: 100px;
+		}
+
+		.teams .team {
+			width: 23%;
+			float: left;	
+			text-align: center;
+			margin-right: 20px;
+		}
+
 
 	</style>
 
@@ -187,7 +214,7 @@
 
 			$('.nav ul li.scoreboard').click(function() {
 				$('body').stop().animate({
-					scrollTop: $(".team div.name").first().offset().top - 100
+					scrollTop: $(".achievements .team div.name").first().offset().top - 100
 				}, 1000);
 			});
 
@@ -211,6 +238,20 @@
 					$(e).addClass('leader');
 				}
 			});
+
+			$(document).on('scroll', function(event) {
+				var currentTop = window.pageYOffset;
+				var tresholdTop = $('.achievements .team div.name').first().offset().top - 60;
+				var tresholdBottom = $('.desc h2').offset().top - 60;
+				
+
+				if (currentTop > tresholdTop && tresholdBottom > currentTop) {
+					$('.teams').removeClass('hidden');
+				} else {
+					$('.teams').addClass('hidden');
+				}
+			});
+
 		});
 
 	</script>
@@ -226,6 +267,15 @@
 		<div class="clear"></div>
 	</div>
 	<div class="container">
+		<div class="teams hidden">
+			<div class="wrapper">
+				<div class="team"><div class="name">Bergen</div></div>
+				<div class="team"><div class="name">Tromsø</div></div>
+				<div class="team"><div class="name">Oslo</div></div>
+				<div class="team"><div class="name">Trondheim</div></div>
+				<div class="clear"></div>
+			</div>
+		</div>
 		<h1>BEKK <br>Robocup 2014</h1>
 		<div class="achievements">
 			<div class="team"><img src="brg.png"><div class="name">Bergen</div></div>
