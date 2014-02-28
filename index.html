@@ -226,14 +226,14 @@
 
 			var max = 0;
 			$('.total').each(function(i,e) { 
-				var score = $(e).html();
+				var score = parseInt($(e).html());
 				if (max < score) {
 					max = score;
 				}
 			});
 
 			$('.total').each(function(i,e) { 
-				var score = $(e).html();
+				var score = parseInt($(e).html());
 				if (score == max) {
 					$(e).addClass('leader');
 				}
@@ -244,7 +244,6 @@
 				var tresholdTop = $('.achievements .team div.name').first().offset().top - 60;
 				var tresholdBottom = $('.total').last().offset().top - 60;
 				
-
 				if (currentTop > tresholdTop && tresholdBottom > currentTop) {
 					$('.teams').removeClass('hidden');
 				} else {
